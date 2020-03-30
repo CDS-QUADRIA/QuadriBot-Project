@@ -15,20 +15,21 @@ client.once('ready', () => {
 
 client.on('message', message => {
   console.log(message.content);
-  if (message.content.startsWith(`${prefix}jp`)) {
-	// send back "Apéro!" to the channel the message was sent in
-	message.channel.send('Apéro?');
+	// if message starts with 'jp' ...
+  if (message.content.startsWith(`jp`)) {
+	// ... send back "Apéro!" to the channel the message was sent in
+	message.channel.send('> JP : :beers: Apéro? :champagne_glass: \n  https://cdn.discordapp.com/attachments/690189290281500681/694145170618187808/costume-pastis-man-deguisement-adulte.png');
 }
-else if (message.content === `${prefix}fp`) {
-	message.channel.send(`Force\nEt\nPastis !`);
+	else if (message.content === `${prefix}fp`) {
+	message.channel.send(` :zap: Force :zap: \n          Et\n :champagne: Pastis ! :champagne: \nhttps://cdn.discordapp.com/attachments/690189290281500681/694145662937202708/image.png`);
 }
 	else if (message.content === `${prefix}serveur`) {
-	message.channel.send(`Ce serveur s'appelle: ${message.guild.name}
+	message.channel.send(`Ce serveur s'appelle : ${message.guild.name}
 	\nTotal de membres: ${message.guild.memberCount}
 	\nCréé le: ${message.guild.createdAt}, par ${message.guild.owner}, dans la région suivante : ${message.guild.region}`);
 }
 	else if (message.content === `${prefix}user-info`) {
-	message.channel.send(`Ton nom d'utilisateur: ${message.author.username}\nTon ID: ${message.author.id}`);
+	message.channel.send(` :man_technologist: Ton nom d'utilisateur: ${message.author.username}\n :id: Ton ID : ${message.author.id}`);
 }
 
 });
